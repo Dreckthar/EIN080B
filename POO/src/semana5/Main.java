@@ -7,7 +7,7 @@ package semana5;
 
 /**
  *
- * @author alexi
+ * @author Pamela Gatica Caballero
  */
 public class Main {
 
@@ -15,22 +15,20 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Persona p = new Persona();
-      Persona p1= new Persona();
-      
-      p.rut = "12345678-9";
-      p.nombre = "Pedro";
-      p.apellido = "Parker";
-      
-      p1.rut = "13151618-1";
-      p1.nombre ="Antonio";
-      p1.apellido = "Stark";
-      
-       // System.out.println("Hola " + p.nombre + " " + p.apellido);
-       // System.out.println("Hola " + p1.nombre);
-       
-        System.out.println(p.saludar());
-        System.out.println(p1.saludar());
+        
+        //Objeto creado usando constructor por defecto
+        Persona persona1 = new Persona();
+        
+        persona1.setRut("12345678-9");
+        persona1.setNombre("Pedro");
+        persona1.setApellido("Parker");
+
+        System.out.println(persona1.saludar());
+        
+        //Objeto creado usando constructor personalizado
+        Persona persona2 =  new Persona("11223344-5","Antonio","Stark");
+        
+        System.out.println(persona2.saludar());
     }
-    
+
 }
