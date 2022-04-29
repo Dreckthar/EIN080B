@@ -19,6 +19,12 @@ public class Animal {
     public String comunicar(){
         return "";
     }
+
+    @Override
+    public String toString() {
+        return "color=" + color;
+    }
+    
     
     
 }

@@ -8,8 +8,15 @@
  * @author labinf
  */
 public class Gato extends Animal {
+
     private int vidas;
 
+    public Gato() {
+        this.vidas = 7;
+    }
+    
+    
+    
     public int getVidas() {
         return vidas;
     }
@@ -20,12 +27,12 @@ public class Gato extends Animal {
 
     @Override
     public String comunicar() {
-        return "Miau!"; //To change body of generated methods, choose Tools | Templates.
+        return "Miau!";
     }
 
-    
-   
-    
-   
-    
+    @Override
+    public String toString() {
+        return "Gato{" + "vidas=" + vidas + " " + super.toString() + '}';
+    }
+
 }

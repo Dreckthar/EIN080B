@@ -18,9 +18,21 @@ public class Main {
         System.out.println("Animal: " + animal.comunicar());
 
         Gato gato = new Gato();
-        gato.setVidas(7);
         gato.setColor("negro");
+        System.out.println(gato);
         System.out.println("Gato: " + gato.comunicar());
+
+        Perro perro = new Perro();
+        perro.setNombre("Frank");
+        perro.setColor("Beige");
+        System.out.println(perro);
+        System.out.println("Perro: " + perro.comunicar());
+        System.out.println("Perro: " + perro.comunicar(3));
+        
+        Perro otroPerro = new Perro("Boby");
+        otroPerro.setColor("negro");
+        System.out.println(otroPerro);
+
     }
 
 }
