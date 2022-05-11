@@ -25,6 +25,20 @@ public class Main {
         auto.acelerar();
         
         System.out.println(auto.getInfo());
+    
+        Conductor c = new Conductor();
+        c.setRut("12345678-9");
+        c.setNombre("Bruno");
+        c.setApellido("Diaz");
+        c.setLicencia('B');
+        
+        System.out.println(c);
+        
+        auto.setConductor(c);
+        
+        System.out.println("Conductor: " + auto.getConductor().getNombre());
+    
+        System.out.println(auto);
     }
     
 }

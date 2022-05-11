@@ -16,6 +16,7 @@ public class Vehiculo {
     private int marcha;
     private int velocidadMax;
     private int marchaMax;
+    private Conductor conductor;
 
     /**
      * Constructor por defecto. Velocidad inicial del vehículo es inicializada
@@ -28,6 +29,7 @@ public class Vehiculo {
         this.marcha = 0;
         this.velocidadMax = 140;
         this.marchaMax = 5;
+        this.conductor = new Conductor();
     }
 
     /**
@@ -41,6 +43,7 @@ public class Vehiculo {
     public Vehiculo(int velocidadMax, int marchaMax) {
         this.velocidadMax = velocidadMax;
         this.marchaMax = marchaMax;
+        this.conductor = new Conductor();
     }
 
     /**
@@ -150,7 +153,15 @@ public class Vehiculo {
     public void setMarchaMax(int marchaMax) {
         this.marchaMax = marchaMax;
     }
+    
+     public Conductor getConductor() {
+        return conductor;
+    }
 
+    public void setConductor(Conductor conductor) {
+        this.conductor = conductor;
+    }
+    
     /**
      * Aumenta la velocidad en 10 km/hr.
      */
@@ -239,4 +250,17 @@ public class Vehiculo {
         return "\n" + this.marca + " " + this.modelo + " patente: " + this.patente
                 + "\nVelocidad: " + this.velocidad + " km/hr  Marcha: " + this.getMarchaString();
     }
+
+    @Override
+    public String toString() {
+       // return "Vehiculo{" + "patente=" + patente + ", marca=" + marca + ", modelo=" + modelo + ", velocidad=" + velocidad + ", marcha=" + marcha + ", velocidadMax=" + velocidadMax + ", marchaMax=" + marchaMax + ", conductor=" + conductor + '}';
+    
+        return "\n" + this.marca + " " + this.modelo + " patente: " + this.patente
+                + "\nVelocidad: " + this.velocidad + " km/hr  Marcha: " + this.getMarchaString()
+                + "\nConductor: " + this.conductor;
+    
+    }
+
+    
+   
 }
