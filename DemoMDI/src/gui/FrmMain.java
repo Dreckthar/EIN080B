@@ -18,6 +18,11 @@ public class FrmMain extends javax.swing.JFrame {
         this.setResizable(false);
         dpMain.add(a1);
         dpMain.add(a2);
+        
+        
+        this.setSize(500, 500);
+        a1.setSize(dpMain.getSize());
+        a1.setUI(null);
     }
 
     /**
@@ -38,16 +43,18 @@ public class FrmMain extends javax.swing.JFrame {
         mnuSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 400));
+        setSize(new java.awt.Dimension(500, 400));
 
         javax.swing.GroupLayout dpMainLayout = new javax.swing.GroupLayout(dpMain);
         dpMain.setLayout(dpMainLayout);
         dpMainLayout.setHorizontalGroup(
             dpMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
         dpMainLayout.setVerticalGroup(
             dpMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 513, Short.MAX_VALUE)
         );
 
         mnuAcciones.setMnemonic('A');
@@ -94,7 +101,9 @@ public class FrmMain extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dpMain)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(dpMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
